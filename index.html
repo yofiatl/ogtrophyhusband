@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OG Trophy Husband | Premium Headwear</title>
+<meta name="description" content="OG Trophy Husband — premium hats for the man who's earned it. Bold style. Zero apologies.">
+
+<!-- Snipcart Stylesheet -->
+<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.css" />
+
+<!-- Fonts — matching the serif logo style -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --gold: #B8963E;
+    --gold-light: #D4B05C;
+    --gold-dim: rgba(184,150,62,0.15);
+    --black: #0B0B0B;
+    --charcoal: #141414;
+    --dark-gray: #1E1E1E;
+    --medium-gray: #7A7A7A;
+    --light-gray: #AAAAAA;
+    --cream: #F2EDE3;
+    --white: #FFFFFF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--black);
+    color: var(--cream);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Texture */
+  body::after {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 9999;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; width: 100%; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1rem 3rem;
+    background: rgba(11,11,11,0.95);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(184,150,62,0.08);
+  }
+  .nav-logo img { height: 38px; width: auto; filter: brightness(1.1); }
+  .nav-links { display: flex; align-items: center; gap: 2.5rem; }
+  .nav-links a {
+    font-family: 'Jost', sans-serif; font-weight: 500; font-size: 0.78rem;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--cream); text-decoration: none; transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .cart-btn {
+    background: none; border: 1px solid var(--gold); color: var(--gold);
+    font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.75rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 0.5rem 1.4rem; cursor: pointer; transition: all 0.3s; position: relative;
+  }
+  .cart-btn:hover { background: var(--gold); color: var(--black); }
+  .cart-count {
+    position: absolute; top: -7px; right: -7px;
+    background: #8B2500; color: var(--cream); font-size: 0.6rem;
+    width: 16px; height: 16px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .hamburger {
+    display: none; flex-direction: column; gap: 5px;
+    background: none; border: none; cursor: pointer; padding: 4px;
+  }
+  .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--gold); transition: all 0.3s; }
+  @media (max-width: 768px) {
+    nav { padding: 0.9rem 1.5rem; }
+    .nav-logo img { height: 30px; }
+    .hamburger { display: flex; }
+    .nav-links {
+      position: fixed; top: 0; right: -100%; width: 75%; height: 100vh;
+      background: var(--charcoal); flex-direction: column; justify-content: center; gap: 2rem;
+      transition: right 0.4s ease; border-left: 1px solid rgba(184,150,62,0.1);
+    }
+    .nav-links.open { right: 0; }
+    .nav-links a { font-size: 1rem; }
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100vh; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; text-align: center;
+    padding: 7rem 2rem 5rem; position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 35%, rgba(184,150,62,0.05) 0%, transparent 65%);
+  }
+  .hero-logo {
+    width: clamp(300px, 50vw, 550px); margin-bottom: 2rem;
+    animation: fadeIn 1s ease both;
+  }
+  .hero-rule {
+    width: 80px; height: 1px; background: var(--gold); margin-bottom: 1.5rem;
+    animation: fadeIn 1s 0.3s ease both;
+  }
+  .hero-sub {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.2rem;
+    font-weight: 400; font-style: italic; color: var(--medium-gray);
+    letter-spacing: 0.04em; max-width: 420px; line-height: 1.7;
+    animation: fadeIn 1s 0.5s ease both;
+  }
+  .hero-cta {
+    margin-top: 2.5rem; display: inline-block;
+    background: transparent; color: var(--gold); border: 1px solid var(--gold);
+    font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.8rem;
+    letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none;
+    padding: 0.9rem 3rem; transition: all 0.4s;
+    animation: fadeIn 1s 0.7s ease both;
+  }
+  .hero-cta:hover {
+    background: var(--gold); color: var(--black);
+    box-shadow: 0 8px 30px rgba(184,150,62,0.2);
+  }
+
+  /* ─── SECTIONS ─── */
+  section { padding: 6rem 2rem; }
+  .section-label {
+    font-family: 'Jost', sans-serif; font-weight: 500; font-size: 0.7rem;
+    letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold);
+    text-align: center; margin-bottom: 0.6rem;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif; font-weight: 700;
+    font-size: clamp(2rem, 4.5vw, 3.2rem); text-align: center;
+    letter-spacing: 0.02em; margin-bottom: 0.6rem;
+  }
+  .section-rule { width: 50px; height: 1px; background: var(--gold); margin: 0 auto 3rem; }
+
+  /* ─── FEATURED ─── */
+  .featured { background: var(--charcoal); padding: 6rem 2rem; }
+  .featured-inner {
+    max-width: 1100px; margin: 0 auto; display: grid;
+    grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+  }
+  .featured-image { position: relative; }
+  .featured-image img {
+    width: 100%; max-width: 480px; display: block; margin: 0 auto;
+    filter: drop-shadow(0 20px 60px rgba(0,0,0,0.5));
+  }
+  .featured-image::before {
+    content: ''; position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%); width: 85%; height: 85%;
+    border: 1px solid rgba(184,150,62,0.08); border-radius: 50%;
+  }
+  .featured-details h3 {
+    font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; margin-bottom: 0.3rem;
+  }
+  .featured-subtitle {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 1rem; color: var(--gold); margin-bottom: 1.5rem;
+  }
+  .featured-details p { font-size: 0.95rem; color: var(--medium-gray); line-height: 1.7; margin-bottom: 1.5rem; }
+  .featured-price {
+    font-family: 'Playfair Display', serif; font-size: 1.8rem;
+    font-weight: 700; color: var(--gold); margin-bottom: 1.5rem;
+  }
+  .featured-add-btn {
+    background: var(--gold); border: none; color: var(--black);
+    font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.8rem;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    padding: 0.9rem 2.5rem; cursor: pointer; transition: all 0.3s;
+  }
+  .featured-add-btn:hover { background: var(--gold-light); box-shadow: 0 6px 25px rgba(184,150,62,0.25); }
+  @media (max-width: 768px) {
+    .featured-inner { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
+  }
+
+  /* ─── PRODUCT GRID ─── */
+  #shop { background: var(--black); }
+  .products-grid {
+    max-width: 1100px; margin: 0 auto; display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;
+  }
+  .product-card {
+    background: var(--charcoal); border: 1px solid rgba(184,150,62,0.06);
+    overflow: hidden; transition: all 0.4s;
+  }
+  .product-card:hover {
+    border-color: rgba(184,150,62,0.25); transform: translateY(-3px);
+    box-shadow: 0 16px 50px rgba(0,0,0,0.4);
+  }
+  .product-image {
+    width: 100%; aspect-ratio: 1; background: var(--dark-gray);
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .product-image img {
+    width: 75%; height: 75%; object-fit: contain;
+    filter: drop-shadow(0 8px 20px rgba(0,0,0,0.4)); transition: transform 0.4s;
+  }
+  .product-card:hover .product-image img { transform: scale(1.05); }
+  .product-tag {
+    position: absolute; top: 10px; left: 10px;
+    background: var(--gold); color: var(--black);
+    font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.6rem;
+    letter-spacing: 0.1em; text-transform: uppercase; padding: 0.2rem 0.65rem;
+  }
+  .product-info { padding: 1.3rem; }
+  .product-name {
+    font-family: 'Playfair Display', serif; font-weight: 600;
+    font-size: 1rem; margin-bottom: 0.25rem;
+  }
+  .product-desc { font-size: 0.8rem; color: var(--medium-gray); margin-bottom: 1rem; line-height: 1.5; }
+  .color-options { display: flex; gap: 0.4rem; margin-bottom: 0.75rem; }
+  .color-dot {
+    width: 14px; height: 14px; border-radius: 50%;
+    border: 2px solid transparent; cursor: pointer; transition: border-color 0.2s;
+  }
+  .color-dot:hover, .color-dot.active { border-color: var(--gold); }
+  .color-dot.c-black { background: #111; }
+  .color-dot.c-navy { background: #1a2744; }
+  .color-dot.c-charcoal { background: #444; }
+  .color-dot.c-olive { background: #4a5c3a; }
+  .color-dot.c-cream { background: #d4c9a8; }
+  .color-dot.c-rust { background: #8B4513; }
+  .size-selector { display: flex; gap: 0.4rem; margin-bottom: 0.75rem; }
+  .size-btn {
+    background: transparent; border: 1px solid rgba(184,150,62,0.2);
+    color: var(--medium-gray); font-family: 'Jost', sans-serif; font-weight: 500;
+    font-size: 0.65rem; letter-spacing: 0.06em;
+    padding: 0.25rem 0.55rem; cursor: pointer; transition: all 0.2s;
+  }
+  .size-btn:hover, .size-btn.active {
+    border-color: var(--gold); color: var(--gold); background: rgba(184,150,62,0.06);
+  }
+  .product-bottom { display: flex; justify-content: space-between; align-items: center; }
+  .product-price {
+    font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; color: var(--gold);
+  }
+  .add-to-cart {
+    background: transparent; border: 1px solid var(--gold); color: var(--gold);
+    font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.7rem;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.55rem 1.1rem; cursor: pointer; transition: all 0.3s;
+  }
+  .add-to-cart:hover { background: var(--gold); color: var(--black); }
+
+  /* ─── ABOUT ─── */
+  #about { background: var(--charcoal); text-align: center; }
+  .about-content { max-width: 620px; margin: 0 auto; }
+  .about-content p {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.15rem;
+    line-height: 1.9; color: var(--medium-gray); margin-bottom: 1.5rem;
+  }
+  .about-content strong { color: var(--cream); font-weight: 600; }
+  .values-strip { display: flex; justify-content: center; gap: 3.5rem; flex-wrap: wrap; margin-top: 3rem; }
+  .value-item { text-align: center; max-width: 180px; }
+  .value-icon { font-size: 1.6rem; margin-bottom: 0.6rem; }
+  .value-title {
+    font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.72rem;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.25rem;
+  }
+  .value-desc { font-size: 0.78rem; color: var(--medium-gray); line-height: 1.5; }
+
+  /* ─── NEWSLETTER ─── */
+  #contact { background: var(--black); text-align: center; }
+  .newsletter-form { display: flex; gap: 0; max-width: 460px; margin: 0 auto; }
+  .newsletter-form input {
+    flex: 1; padding: 0.85rem 1.2rem; background: var(--dark-gray);
+    border: 1px solid rgba(184,150,62,0.15); border-right: none;
+    color: var(--cream); font-family: 'Jost', sans-serif; font-size: 0.85rem; outline: none;
+  }
+  .newsletter-form input::placeholder { color: var(--medium-gray); }
+  .newsletter-form input:focus { border-color: var(--gold); }
+  .newsletter-form button {
+    padding: 0.85rem 1.6rem; background: var(--gold); border: 1px solid var(--gold);
+    color: var(--black); font-family: 'Jost', sans-serif; font-weight: 600;
+    font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+    cursor: pointer; transition: all 0.3s;
+  }
+  .newsletter-form button:hover { background: var(--gold-light); }
+  .form-note { font-size: 0.72rem; color: var(--medium-gray); margin-top: 0.8rem; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    padding: 3rem 2rem; text-align: center;
+    border-top: 1px solid rgba(184,150,62,0.06); background: var(--charcoal);
+  }
+  .footer-logo img { height: 32px; margin-bottom: 1rem; filter: brightness(0.8); }
+  .footer-links {
+    display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.2rem; flex-wrap: wrap;
+  }
+  .footer-links a {
+    font-size: 0.75rem; color: var(--medium-gray); text-decoration: none;
+    letter-spacing: 0.06em; transition: color 0.3s;
+  }
+  .footer-links a:hover { color: var(--gold); }
+  .footer-copy { font-size: 0.65rem; color: rgba(122,122,122,0.4); letter-spacing: 0.04em; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 600px) {
+    .products-grid { grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+    .product-info { padding: 0.9rem; }
+    .product-name { font-size: 0.85rem; }
+    .product-desc { font-size: 0.72rem; }
+    .product-price { font-size: 1rem; }
+    .add-to-cart { font-size: 0.6rem; padding: 0.4rem 0.7rem; }
+    .newsletter-form { flex-direction: column; }
+    .newsletter-form input { border-right: 1px solid rgba(184,150,62,0.15); }
+    section { padding: 4rem 1.5rem; }
+    .values-strip { gap: 2rem; }
+  }
+  @media (max-width: 380px) { .products-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo"><img src="images/logo-white.png" alt="OG Trophy Husband"></a>
+  <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links">
+    <a href="#featured">Shop</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <button class="snipcart-checkout cart-btn">Cart <span class="snipcart-items-count cart-count">0</span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="images/logo-gold.png" alt="OG Trophy Husband" class="hero-logo">
+  <div class="hero-rule"></div>
+  <p class="hero-sub">Premium headwear for the man who's earned it. Bold style. Zero apologies.</p>
+  <a href="#featured" class="hero-cta">Shop the Collection</a>
+</section>
+
+<!-- FEATURED -->
+<section class="featured" id="featured">
+  <div class="featured-inner">
+    <div class="featured-image">
+      <img src="images/hat-mockup.png" alt="OG Trophy Husband Classic Trucker Hat">
+    </div>
+    <div class="featured-details">
+      <p class="section-label">Flagship</p>
+      <h3>The OG Trucker</h3>
+      <p class="featured-subtitle">The one that started it all.</p>
+      <p>Structured five-panel trucker with mesh back. White-on-black OG Trophy Husband logo front and center. Snapback closure fits all.</p>
+      <div class="featured-price">$34.99</div>
+      <button class="snipcart-add-item featured-add-btn"
+        data-item-id="ogtd-og-trucker"
+        data-item-price="34.99"
+        data-item-url="/"
+        data-item-name="The OG Trucker"
+        data-item-description="Structured five-panel trucker. White-on-black OG Trophy Husband logo. Snapback closure."
+        data-item-image="images/hat-mockup.png"
+        data-item-custom1-name="Color"
+        data-item-custom1-options="Black"
+        data-item-custom1-required="true">
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="shop">
+  <p class="section-label">The Collection</p>
+  <h2 class="section-title">Shop All Hats</h2>
+  <div class="section-rule"></div>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/hat-mockup.png" alt="The Classic Snapback">
+        <span class="product-tag">Bestseller</span>
+      </div>
+      <div class="product-info">
+        <div class="product-name">The Classic Snapback</div>
+        <p class="product-desc">Structured crown, flat brim. Embroidered logo.</p>
+        <div class="color-options">
+          <div class="color-dot c-black active" title="Black"></div>
+          <div class="color-dot c-navy" title="Navy"></div>
+          <div class="color-dot c-charcoal" title="Charcoal"></div>
+        </div>
+        <div class="product-bottom">
+          <span class="product-price">$34.99</span>
+          <button class="snipcart-add-item add-to-cart"
+            data-item-id="ogtd-classic-snapback" data-item-price="34.99" data-item-url="/"
+            data-item-name="The Classic Snapback"
+            data-item-description="Structured crown, flat brim. Embroidered OG Trophy Husband logo."
+            data-item-image="images/hat-mockup.png"
+            data-item-custom1-name="Color" data-item-custom1-options="Black|Navy|Charcoal"
+            data-item-custom1-required="true">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/hat-mockup.png" alt="The Dad Hat">
+        <span class="product-tag">New</span>
+      </div>
+      <div class="product-info">
+        <div class="product-name">The Dad Hat</div>
+        <p class="product-desc">Relaxed fit, curved brim. Washed cotton twill.</p>
+        <div class="color-options">
+          <div class="color-dot c-black active" title="Black"></div>
+          <div class="color-dot c-olive" title="Olive"></div>
+          <div class="color-dot c-cream" title="Cream"></div>
+        </div>
+        <div class="product-bottom">
+          <span class="product-price">$29.99</span>
+          <button class="snipcart-add-item add-to-cart"
+            data-item-id="ogtd-dad-hat" data-item-price="29.99" data-item-url="/"
+            data-item-name="The Dad Hat"
+            data-item-description="Relaxed fit, curved brim. Washed cotton twill with embroidered logo."
+            data-item-image="images/hat-mockup.png"
+            data-item-custom1-name="Color" data-item-custom1-options="Black|Olive|Cream"
+            data-item-custom1-required="true">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/hat-mockup.png" alt="The Mesh Back Trucker">
+      </div>
+      <div class="product-info">
+        <div class="product-name">The Mesh Back Trucker</div>
+        <p class="product-desc">Retro trucker silhouette. Patch logo on front.</p>
+        <div class="color-options">
+          <div class="color-dot c-black active" title="Black/Black"></div>
+          <div class="color-dot c-charcoal" title="Charcoal/White"></div>
+          <div class="color-dot c-rust" title="Rust/Tan"></div>
+        </div>
+        <div class="product-bottom">
+          <span class="product-price">$32.99</span>
+          <button class="snipcart-add-item add-to-cart"
+            data-item-id="ogtd-mesh-trucker" data-item-price="32.99" data-item-url="/"
+            data-item-name="The Mesh Back Trucker"
+            data-item-description="Retro trucker silhouette. Patch logo on structured front panel."
+            data-item-image="images/hat-mockup.png"
+            data-item-custom1-name="Color" data-item-custom1-options="Black/Black|Charcoal/White|Rust/Tan"
+            data-item-custom1-required="true">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/hat-mockup.png" alt="The Premium Fitted">
+        <span class="product-tag">Limited</span>
+      </div>
+      <div class="product-info">
+        <div class="product-name">The Premium Fitted</div>
+        <p class="product-desc">Wool blend. Gold-thread embroidered crest.</p>
+        <div class="color-options">
+          <div class="color-dot c-black active" title="Black"></div>
+          <div class="color-dot c-navy" title="Navy"></div>
+        </div>
+        <div class="size-selector">
+          <button class="size-btn" data-size="S/M">S/M</button>
+          <button class="size-btn active" data-size="M/L">M/L</button>
+          <button class="size-btn" data-size="L/XL">L/XL</button>
+        </div>
+        <div class="product-bottom">
+          <span class="product-price">$44.99</span>
+          <button class="snipcart-add-item add-to-cart"
+            data-item-id="ogtd-premium-fitted" data-item-price="44.99" data-item-url="/"
+            data-item-name="The Premium Fitted"
+            data-item-description="Structured wool blend. Gold-thread embroidered crest. Limited run."
+            data-item-image="images/hat-mockup.png"
+            data-item-custom1-name="Color" data-item-custom1-options="Black|Navy"
+            data-item-custom1-required="true"
+            data-item-custom2-name="Size" data-item-custom2-options="S/M|M/L|L/XL"
+            data-item-custom2-required="true">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <p class="section-label">The Brand</p>
+  <h2 class="section-title">About OG Trophy Husband</h2>
+  <div class="section-rule"></div>
+  <div class="about-content">
+    <p><strong>You know who you are.</strong> You show up. You put in the work. You hold it down — at home, at the office, and everywhere in between. This brand isn't about being perfect. It's about being <strong>earned</strong>.</p>
+    <p>OG Trophy Husband is premium headwear for men who wear the title with pride. Every piece is crafted with quality materials and delivered direct to your door.</p>
+  </div>
+  <div class="values-strip">
+    <div class="value-item">
+      <div class="value-icon">🏆</div>
+      <div class="value-title">Earned, Not Given</div>
+      <div class="value-desc">This title isn't a participation trophy.</div>
+    </div>
+    <div class="value-item">
+      <div class="value-icon">🎯</div>
+      <div class="value-title">Quality Built</div>
+      <div class="value-desc">Premium materials. Precision detail.</div>
+    </div>
+    <div class="value-item">
+      <div class="value-icon">📦</div>
+      <div class="value-title">Direct to You</div>
+      <div class="value-desc">Printed on demand. Shipped to your door.</div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section id="contact">
+  <p class="section-label">Stay in the Loop</p>
+  <h2 class="section-title">Join the Club</h2>
+  <div class="section-rule"></div>
+  <div class="newsletter-form">
+    <input type="email" placeholder="Your email address" id="newsletter-email">
+    <button type="button" onclick="handleNewsletter()">Subscribe</button>
+  </div>
+  <p class="form-note">New drops, limited runs, and members-only deals. No spam.</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo"><img src="images/logo-gold.png" alt="OG Trophy Husband"></div>
+  <div class="footer-links">
+    <a href="#featured">Shop</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#">Shipping & Returns</a>
+    <a href="#">Privacy Policy</a>
+  </div>
+  <p class="footer-copy">&copy; 2025 OG Trophy Husband. All rights reserved. Atlanta, GA.</p>
+</footer>
+
+<!-- SNIPCART — Replace YOUR_SNIPCART_API_KEY with your actual key from snipcart.com -->
+<div hidden id="snipcart" data-api-key="YOUR_SNIPCART_API_KEY" data-config-modal-style="side"></div>
+<script src="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.js"></script>
+
+<script>
+  document.querySelectorAll('.color-options').forEach(g => {
+    g.querySelectorAll('.color-dot').forEach(d => {
+      d.addEventListener('click', () => {
+        g.querySelectorAll('.color-dot').forEach(x => x.classList.remove('active'));
+        d.classList.add('active');
+      });
+    });
+  });
+  document.querySelectorAll('.size-selector').forEach(g => {
+    g.querySelectorAll('.size-btn').forEach(b => {
+      b.addEventListener('click', () => {
+        g.querySelectorAll('.size-btn').forEach(x => x.classList.remove('active'));
+        b.classList.add('active');
+      });
+    });
+  });
+  function handleNewsletter() {
+    const e = document.getElementById('newsletter-email').value;
+    if (e && e.includes('@')) {
+      alert("Thanks for joining the club! You'll hear from us soon.");
+      document.getElementById('newsletter-email').value = '';
+    } else { alert('Please enter a valid email.'); }
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) t.scrollIntoView({ behavior: 'smooth' });
+      document.querySelector('.nav-links')?.classList.remove('open');
+    });
+  });
+</script>
+</body>
+</html>
